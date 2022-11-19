@@ -92,6 +92,7 @@ const HomePage = () => {
             color: open ? "white" : "white",
             borderRadius: "1rem",
             height: "80%",
+            width: "10%",
           }}
         >
           Vista1
@@ -106,6 +107,7 @@ const HomePage = () => {
             color: open1 ? "white" : "white",
             borderRadius: "1rem",
             height: "80%",
+            width: "10%",
           }}
         >
           Vista2
@@ -120,6 +122,7 @@ const HomePage = () => {
             color: open2 ? "white" : "white",
             borderRadius: "1rem",
             height: "80%",
+            width: "10%",
           }}
         >
           Vista3
@@ -134,6 +137,7 @@ const HomePage = () => {
             color: open3 ? "white" : "white",
             borderRadius: "1rem",
             height: "80%",
+            width: "10%",
           }}
         >
           Vista4
@@ -148,6 +152,7 @@ const HomePage = () => {
             color: open4 ? "white" : "white",
             borderRadius: "1rem",
             height: "80%",
+            width: "10%",
           }}
         >
           Vista5
@@ -162,6 +167,7 @@ const HomePage = () => {
             color: open5 ? "white" : "white",
             borderRadius: "1rem",
             height: "80%",
+            width: "10%",
           }}
         >
           Vista6
