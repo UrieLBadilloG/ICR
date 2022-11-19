@@ -26,7 +26,10 @@ import {
     AiOutlineSearch,
     AiOutlineSetting,
 } from "react-icons/ai";
-import { MdLogout, MdOutlineAnalytics } from "react-icons/md";
+import { TbTool } from "react-icons/tb";
+import { GiDeliveryDrone } from "react-icons/gi";
+import { FaRobot, FaSatellite } from "react-icons/fa";
+import { MdLogout, MdOutlineAnalytics, MdBiotech } from "react-icons/md";
 import { BsPeople } from "react-icons/bs";
 
 import { ThemeContext } from "./../../App";
@@ -48,7 +51,7 @@ const Sidebar = () => {
     };
 
     return (
-        <SSidebar isOpen={sidebarOpen}>
+        <SSidebar isOpen={sidebarOpen} >
             <>
                 <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p)}>
                     <AiOutlineLeft />
@@ -56,56 +59,25 @@ const Sidebar = () => {
             </>
             <SLogo>
                 <img src={logoSVG} alt="logo" />
-            </SLogo>
-            <SSearch
-                onClick={searchClickHandler}
-                style={!sidebarOpen ? { width: `fit-content` } : {}}
-            >
-                <SSearchIcon>
-                    <AiOutlineSearch />
-                </SSearchIcon>
-                <input
-                    ref={searchRef}
-                    placeholder="Search"
-                    style={!sidebarOpen ? { width: 0, padding: 0 } : {}}
-                />
-            </SSearch>
+            </SLogo>    
             <SDivider />
             {linksArray.map(({ icon, label, notification, to }) => (
+                
                 <SLinkContainer key={label} isActive={pathname === to}>
                     <SLink to={to} style={!sidebarOpen ? { width: `fit-content` } : {}}>
+                    <br/>
+                            <br/>
+                            <br/>
                         <SLinkIcon>{icon}</SLinkIcon>
                         {sidebarOpen && (
                             <>
                                 <SLinkLabel>{label}</SLinkLabel>
-                                {/* if notifications are at 0 or null, do not display */}
-                                {!!notification && (
-                                    <SLinkNotification>{notification}</SLinkNotification>
-                                )}
+                               
                             </>
                         )}
                     </SLink>
                 </SLinkContainer>
             ))}
-            <SDivider />
-            {secondaryLinksArray.map(({ icon, label }) => (
-                <SLinkContainer key={label}>
-                    <SLink to="/" style={!sidebarOpen ? { width: `fit-content` } : {}}>
-                        <SLinkIcon>{icon}</SLinkIcon>
-                        {sidebarOpen && <SLinkLabel>{label}</SLinkLabel>}
-                    </SLink>
-                </SLinkContainer>
-            ))}
-            <SDivider />
-            <STheme>
-                {sidebarOpen && <SThemeLabel>Dark Mode</SThemeLabel>}
-                <SThemeToggler
-                    isActive={theme === "dark"}
-                    onClick={() => setTheme((p) => (p === "light" ? "dark" : "light"))}
-                >
-                    <SToggleThumb style={theme === "dark" ? { right: "1px" } : {}} />
-                </SThemeToggler>
-            </STheme>
         </SSidebar>
     );
 };
@@ -115,37 +87,33 @@ const linksArray = [
         label: "Home",
         icon: <AiOutlineHome />,
         to: "/",
-        notification: 0,
     },
     {
-        label: "Statistics",
-        icon: <MdOutlineAnalytics />,
-        to: "/statistics",
-        notification: 3,
+        label: "Services",
+        icon: <TbTool />,
+        to: "/services",
     },
     {
-        label: "Customers",
-        icon: <BsPeople />,
-        to: "/customers",
-        notification: 0,
+        label: "Delivery",
+        icon: <GiDeliveryDrone />,
+        to: "/delivery",
     },
     {
-        label: "Diagrams",
-        icon: <AiOutlineApartment />,
-        to: "/diagrams",
-        notification: 1,
+        label: "Autonomus",
+        icon: <FaRobot />,
+        to: "/autonomus",
+    },
+    {
+        label: "Biology",
+        icon: <MdBiotech />,
+        to: "/biology",
+    },
+    {
+        label: "Test",
+        icon: <FaSatellite />,
+        to: "/test",
     },
 ];
 
-const secondaryLinksArray = [
-    {
-        label: "Settings",
-        icon: <AiOutlineSetting />,
-    },
-    {
-        label: "Logout",
-        icon: <MdLogout />,
-    },
-];
 
 export default Sidebar;

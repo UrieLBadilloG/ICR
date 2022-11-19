@@ -9,7 +9,7 @@ import { darkTheme, lightTheme } from "./styles/theme";
 export const ThemeContext = React.createContext(null);
 
 const App = () => {
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
     const themeStyle = theme === "light" ? lightTheme : darkTheme;
 
     return (
@@ -17,7 +17,7 @@ const App = () => {
             <ThemeProvider theme={themeStyle}>
                 <GlobalStyle />
                 <Helmet>
-                    <title>Sidebar - Code Focus</title>
+                    <title>Genesis-ICR</title>
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
                     <link
