@@ -26,19 +26,51 @@ const HomePage = () => {
             //presionado
             document.getElementById("item1").style.display = "none";
             document.getElementById("item2").style.gridColumn = "1/20";
+            if (open2 && open3) {
+                document.getElementById("item2").style.gridRow = "2/13";
+                document.getElementById("item2").style.height = "100%";
+            }
+            if (open1) {
+                document.getElementById("item3").style.gridRow = "2/13";
+                document.getElementById("item3").style.height = "100%";
+                document.getElementById("item4").style.gridRow = "2/13";
+                document.getElementById("item4").style.height = "100%";
+            }
         } else {
             document.getElementById("item1").style.display = "block";
             document.getElementById("item2").style.gridColumn = "11/20";
+            
+                document.getElementById("item3").style.gridRow = "8";
+                document.getElementById("item3").style.height = "300px";
+                document.getElementById("item4").style.gridRow = "8";
+                document.getElementById("item4").style.height = "300px";
+            
         }
+
     };
     const vista2 = () => {
         setOpen1(!open1);
         if (!open1) {
             document.getElementById("item2").style.display = "none";
             document.getElementById("item1").style.gridColumn = "1/20";
+            if (open2 && open3) {
+                document.getElementById("item1").style.gridRow = "2/13";
+                document.getElementById("item1").style.height = "100%";
+            }
+            if (open) {
+                document.getElementById("item3").style.gridRow = "2/13";
+                document.getElementById("item3").style.height = "100%";
+                document.getElementById("item4").style.gridRow = "2/13";
+                document.getElementById("item4").style.height = "100%";
+            }
         } else {
             document.getElementById("item2").style.display = "block";
             document.getElementById("item1").style.gridColumn = "1/10";
+            
+            document.getElementById("item3").style.gridRow = "8";
+            document.getElementById("item3").style.height = "300px";
+            document.getElementById("item4").style.gridRow = "8";
+            document.getElementById("item4").style.height = "300px";
 
         }
     };
@@ -47,25 +79,100 @@ const HomePage = () => {
         if (!open2) {
             document.getElementById("item3").style.display = "none";
             document.getElementById("item4").style.gridColumn = "1/20";
+            if (open4 && open5) {
+                document.getElementById("item4").style.gridRow = "11/20";
+                document.getElementById("item4").style.height = "100%";
+            }
+            if(open3){
+                document.getElementById("item2").style.gridRow = "2/7";
+                document.getElementById("item2").style.height = "100%";
+                document.getElementById("item1").style.gridRow = "2/7";
+                document.getElementById("item1").style.height = "100%";
+                document.getElementById("item5").style.gridRow = "8";
+                document.getElementById("item5").style.height = "500px";
+                document.getElementById("item6").style.gridRow = "8";
+                document.getElementById("item6").style.height = "500px";
+            
+            }
 
         } else {
             document.getElementById("item3").style.display = "block";
             document.getElementById("item4").style.gridColumn = "11/20";
-
+            //vista 1
+            document.getElementById("item1").style.gridRow = "2";
+            document.getElementById("item1").style.height = "300px";
+            //vista 2
+            document.getElementById("item2").style.gridRow = "2";
+            document.getElementById("item2").style.height = "300px";
+            // 
+            document.getElementById("item5").style.gridRow = "14/20";
+            document.getElementById("item5").style.height = "300px";
+            document.getElementById("item6").style.gridRow = "14/20";
+            document.getElementById("item6").style.height = "300px";
+        
+        }
+        if (open && !open2 && open3) {
+            document.getElementById("item2").style.gridRow = "2/13";
+            document.getElementById("item2").style.height = "100%";
+        }
+        if (open1 && !open2 && open3) {
+            document.getElementById("item1").style.gridRow = "2/13";
+            document.getElementById("item1").style.height = "100%";
         }
     };
+
     const vista4 = () => {
         setOpen3(!open3);
         if (!open3) {
             document.getElementById("item4").style.display = "none";
             document.getElementById("item3").style.gridColumn = "1/20";
+            if(open2){
+                document.getElementById("item2").style.gridRow = "2/7";
+                document.getElementById("item2").style.height = "100%";
+                document.getElementById("item1").style.gridRow = "2/7";
+                document.getElementById("item1").style.height = "100%";
+                document.getElementById("item5").style.gridRow = "8";
+                document.getElementById("item5").style.height = "500px";
+                document.getElementById("item6").style.gridRow = "8";
+                document.getElementById("item6").style.height = "500px";
+            
+            }
         } else {
             document.getElementById("item4").style.display = "block";
             document.getElementById("item3").style.gridColumn = "1/10";
+            //vista 1
+            document.getElementById("item1").style.gridRow = "2";
+            document.getElementById("item1").style.height = "300px";
+            //vista 2
+            document.getElementById("item2").style.gridRow = "2";
+            document.getElementById("item2").style.height = "300px";
+            document.getElementById("item5").style.gridRow = "14/20";
+                document.getElementById("item5").style.height = "300px";
+                document.getElementById("item6").style.gridRow = "14/20";
+                document.getElementById("item6").style.height = "300px";
+            
+        }
+        if (open && open2 && !open3) {
+            document.getElementById("item2").style.gridRow = "2/13";
+            document.getElementById("item2").style.height = "100%";
+        }
+        if (open1 && open2 && !open3) {
+            document.getElementById("item1").style.gridRow = "2/13";
+            document.getElementById("item1").style.height = "100%";
         }
     };
     const vista5 = () => {
         setOpen4(!open4);
+        if (!open4 && open5) {
+            document.getElementById("item3").style.gridRow = "10/18";
+            document.getElementById("item3").style.height = "100%";
+            document.getElementById("item4").style.gridRow = "10/18";
+            document.getElementById("item4").style.height = "100%";
+            document.getElementById("item1").style.gridRow = "2/9";
+            document.getElementById("item1").style.height = "100%";
+            document.getElementById("item2").style.gridRow = "2/9";
+            document.getElementById("item2").style.height = "100%";
+        }
         if (!open4) {
             document.getElementById("item5").style.display = "none";
             document.getElementById("item6").style.gridColumn = "1/20";
@@ -73,11 +180,29 @@ const HomePage = () => {
         } else {
             document.getElementById("item5").style.display = "block";
             document.getElementById("item6").style.gridColumn = "11/20";
-
+            //regresando a tamaño normal
+            document.getElementById("item3").style.gridRow = "8";
+            document.getElementById("item3").style.height = "300px";
+            document.getElementById("item4").style.gridRow = "8";
+            document.getElementById("item4").style.height = "300px";
+            document.getElementById("item1").style.gridRow = "2";
+            document.getElementById("item1").style.height = "300px";
+            document.getElementById("item2").style.gridRow = "2";
+            document.getElementById("item2").style.height = "300px";
         }
     };
     const vista6 = () => {
         setOpen5(!open5);
+        if (open4 && !open5) {
+            document.getElementById("item3").style.gridRow = "10/18";
+            document.getElementById("item3").style.height = "100%";
+            document.getElementById("item4").style.gridRow = "10/18";
+            document.getElementById("item4").style.height = "100%";
+            document.getElementById("item1").style.gridRow = "2/9";
+            document.getElementById("item1").style.height = "100%";
+            document.getElementById("item2").style.gridRow = "2/9";
+            document.getElementById("item2").style.height = "100%";
+        }
         if (!open5) {
             document.getElementById("item6").style.display = "none";
             document.getElementById("item5").style.gridColumn = "1/20";
@@ -85,7 +210,15 @@ const HomePage = () => {
         } else {
             document.getElementById("item6").style.display = "block";
             document.getElementById("item5").style.gridColumn = "1/10";
-
+            //regresando a tamaño normal
+            document.getElementById("item3").style.gridRow = "8";
+            document.getElementById("item3").style.height = "300px";
+            document.getElementById("item4").style.gridRow = "8";
+            document.getElementById("item4").style.height = "300px";
+            document.getElementById("item1").style.gridRow = "2";
+            document.getElementById("item1").style.height = "300px";
+            document.getElementById("item2").style.gridRow = "2";
+            document.getElementById("item2").style.height = "300px";
         }
     };
     const style = {
@@ -95,9 +228,6 @@ const HomePage = () => {
             "5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% ",
         gridTemplateRows: "5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%5% 5% 5% 5% ",
         gap: "2px",
-    };
-    const color = {
-        background: "red",
     };
     const tab = <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</>;
     return (
@@ -205,6 +335,7 @@ const HomePage = () => {
                 }}
             >
                 <ScrollbarWrapper>
+                    1
                     <DeliveryPage />
                 </ScrollbarWrapper>
             </CardContent>
@@ -237,7 +368,6 @@ const HomePage = () => {
             >
                 <ScrollbarWrapper>
                     <AutonomusPage />
-
                 </ScrollbarWrapper>
             </CardContent>
             <CardContent

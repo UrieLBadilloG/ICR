@@ -4,7 +4,7 @@ const DeliveryPage = () => {
     return (
     <>
     <h1>Delivery</h1>
-    2. Un texto es una composición de signos codificados en un sistema de
+    Un texto es una composición de signos codificados en un sistema de
     escritura que forma una unidad de sentido. También es una composición
     de caracteres imprimibles (con grafema) generados por un algoritmo de
     cifrado que, aunque no tienen sentido para cualquier persona, sí puede
